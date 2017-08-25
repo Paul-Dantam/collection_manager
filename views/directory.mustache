@@ -11,14 +11,20 @@
 <body>
     <section class="wrapper">
 
+        <nav class="navBar"> <a href="" class="navItem"></a> <a href="" class="navItem"></a> </nav>
+
         <div class="container">
+
+
 
             <h1>Your Game Directory</h1>
 
             {{#gameDirectory}}
             <div class="returnItem">
 
-                <div class="titleDisplay"><span class="label">Title: </span>{{title}}</div>
+                <div class="titleBlock">
+                    <div class="titleDisplay"><a href="/" class="label">Title: </a>{{title}}</div>
+                </div>
                 <div class="mediumDisplay"><span class="label">Medium: </span>{{medium}}</div>
                 <div class="playersDisplay"><span class="label">Players: </span>{{players}}</div>
                 <div class="publisherDisplay"><span class="label">Publisher: </span>{{publisher}}</div>

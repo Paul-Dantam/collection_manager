@@ -1,3 +1,13 @@
+const express = require("express");
+const indexRoutes = express.Router();
+const mongoose = require("mongoose");
+const bluebird = require("bluebird");
+const Game = require("./models/gameCollection");
+
+mongoose.Promise = bluebird;
+
+mongoose.connect("mongodb://localhost:27017/gameDirectory");
+
 app.get("/", (req, res) => {
   Game.find()
     .then(foundGames => {
@@ -10,3 +20,5 @@ app.get("/", (req, res) => {
       res.status(500).send(err);
     });
 });
+
+module.exports = indexRoutes;
