@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <section class="wrapper">
+
+        <div class="container">
+
+            <h1>Your Game Directory</h1>
+
+            {{#gameDirectory}}
+            <div class="returnItem">
+
+                <div class="titleDisplay"><span class="label">Title: </span>{{title}}</div>
+                <div class="mediumDisplay"><span class="label">Medium: </span>{{medium}}</div>
+                <div class="playersDisplay"><span class="label">Players: </span>{{players}}</div>
+                <div class="publisherDisplay"><span class="label">Publisher: </span>{{publisher}}</div>
+                <div class="genreDisplay"><span class="label">Genre: </span>{{genre}}</div>
+                <div class="developerDisplay"><span class="label">Developer: </span>{{developer}}</div>
+                <div class="writerDisplay"><span class="label">Writer: </span>{{writer}}</div>
+                <div class="producerDisplay"><span class="label">Producer: </span>{{producer}}</div>
+                <div class="designerDisplay"><span class="label">Designer: </span>{{designer}}</div>
+                <div class="versionDisplay"><span class="label">Version: </span>{{version}}</div>
+                <div class="releaseDisplay"><span class="label">Release: </span>{{release}}</div>
+
+            </div>
+            {{/gameDirectory}}
+
+        </div>
+
+    </section>
+</body>
+
+</html>

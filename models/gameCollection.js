@@ -25,12 +25,16 @@ const GamingCollectionSchema = new Schema({
     type: String,
     required: true
   },
+  developer: {
+    type: String,
+    required: true
+  },
   writer: String,
   producer: String,
   designer: String,
-  version: Number,
+  version: Schema.Types.Mixed,
   release: {
-    type: Number,
+    type: Schema.Types.Mixed,
     required: true
   }
 });
