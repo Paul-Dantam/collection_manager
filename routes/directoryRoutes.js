@@ -2,7 +2,7 @@ const express = require("express");
 const directoryRoutes = express.Router();
 const mongoose = require("mongoose");
 const bluebird = require("bluebird");
-const Game = require("./models/gameCollection");
+const Game = require("../models/gameCollection");
 
 mongoose.Promise = bluebird;
 
