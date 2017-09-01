@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SubmitNew</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+
+    <section class="submitWrapper">
+
+    <h1 class="directoryTitle">Your Game Directory</h1>
+
+        <div class="submitTitle">Fill out the form to add a game to your directory!</div>
+
+        <div class="submitContainer">
+            <form action="/directory/newgame" class="submitForm" method="POST">
+                <label for="title" class="submitLabel"></label>
+                <input type="text" name="title" class="submitInput" placeholder="Game Title" required>
+
+                <label for="medium" class="submitLabel"></label>
+                <select name="medium" id="" class="inputSelect" required>
+            <option value="" disabled selected>How is this game played?</option>
+            <option value="tabletop" class="submitOption">Tabletop</option>
+            <option value="videogame" class="submitOption">Video Game</option>
+            <option value="boardgame" class="submitOption">Board Game</option>
+            <option value="cardgame" class="submitOption">Card Game</option>
+        </select>
+
+                <label for="" class="submitLabel"></label>
+                <select name="players" id="" class="inputSelect" required>
+            <option value="" disabled selected>Select Number of Players</option>
+            <option value="single" class="submitOption">Single Player</option>
+            <option value="co-op" class="submitOption">Co-op</option>
+            <option value="group" class="submitOption">Group</option>
+        </select>
+
+                <label for="publisher" class="submitLabel"></label>
+                <input type="text" name="publisher" class="submitInput" placeholder="Publisher" required>
+
+                <label for="genre" class="submitLabel"></label>
+                <input type="text" name="genre" class="submitInput" placeholder="Genre" required>
+
+                <label for="developer" class="submitLabel"></label>
+                <input type="text" name="developer" class="submitInput" placeholder="Developer" required>
+
+                <label for="writer" class="submitLabel"></label>
+                <input type="text" name="writer" class="submitInput" placeholder="Writer">
+
+                <label for="producer" class="submitLabel"></label>
+                <input type="text" name="producer" class="submitInput" placeholder="Producer">
+
+                <label for="designer" class="submitLabel"></label>
+                <input type="text" name="designer" class="submitInput" placeholder="Designer">
+
+                <label for="version" class="submitLabel"></label>
+                <input type="text" name="version" class="submitInput" placeholder="Version or Patch">
+
+                <label for="release" class="submitLabel"></label>
+                <input type="text" name="release" class="submitInput" placeholder="Release Date" required>
+
+                <button class="submitButton">Create new Item</button>
+            </form>
+
+        </div>
+
+
+    </section>
+
+
+</body>
+
+</html>

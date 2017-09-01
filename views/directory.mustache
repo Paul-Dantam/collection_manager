@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+
+<body>
+    <section class="wrapper">
+
+        <h1 class="directoryTitle">Your Game Directory</h1>
+
+        <div class="container">
+
+            <div class="addStuff">
+                <a href="/directory/newItem" class="addButton"></a>
+                <label class="addText" for="addButton"> Add a new game!!</label>
+            </div>
+
+            {{#gameDirectory}}
+            <div class="returnItem">
+
+                <div class="titleBlock">
+                    <div class="label">Title: <a href="/directory/update/{{_id}}" class="titleProperty"> {{title}} </a></div>
+                </div>
+                <div class="itemProperty" id="mediumDisplay"><span class="label">Medium: </span>{{medium}}</div>
+                <div class="itemProperty" id="playersDisplay"><span class="label">Players: </span>{{players}}</div>
+                <div class="itemProperty" id="publisherDisplay"><span class="label">Publisher: </span>{{publisher}}</div>
+                <div class="itemProperty" id="genreDisplay"><span class="label">Genre: </span>{{genre}}</div>
+                <div class="itemProperty" id="developerDisplay"><span class="label">Developer: </span>{{developer}}</div>
+                <div class="itemProperty" id="writerDisplay"><span class="label">Writer: </span>{{writer}}</div>
+                <div class="itemProperty" id="producerDisplay"><span class="label">Producer: </span>{{producer}}</div>
+                <div class="itemProperty" id="designerDisplay"><span class="label">Designer: </span>{{designer}}</div>
+                <div class="itemProperty" id="versionDisplay"><span class="label">Version: </span>{{version}}</div>
+                <div class="itemProperty" id="releaseDisplay"><span class="label">Release: </span>{{release}}</div>
+
+            </div>
+            {{/gameDirectory}}
+
+        </div>
+
+    </section>
+</body>
+
+</html>
