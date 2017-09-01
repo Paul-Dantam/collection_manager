@@ -6,8 +6,6 @@ const Game = require("../models/gameCollection");
 
 mongoose.Promise = bluebird;
 
-mongoose.connect("mongodb://localhost:27017/gameDirectory");
-
 indexRoutes.get("/", (req, res) => {
   Game.find()
     .then(foundGames => {
@@ -19,6 +17,10 @@ indexRoutes.get("/", (req, res) => {
     .catch(err => {
       res.status(500).send(err);
     });
+});
+
+indexRoutes.get("/newItem", (req, res) => {
+  res.render("submit");
 });
 
 module.exports = indexRoutes;

@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  color: whitesmoke;
+}
+
+.wrapper {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  background: url("../images/gamingbackground.jpg");
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  width: 80%;
+  flex-wrap: wrap;
+  background: #4c4b4f;
+  opacity: 0.88;
+}
+
+.directoryTitle {
+  width: 100%;
+  height: 3rem;
+}
+
+.addText {
+  padding: 1.3rem;
+}
+
+.addStuff {
+  align-items: center;
+  display: flex;
+  width: 100%;
+  height: 5rem;
+  padding-bottom: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid black;
+}
+
+.addButton {
+  padding: 0.4rem;
+  flex-basis: 7%;
+  background: url("../images/Dpad.png") no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 4rem;
+  box-shadow: 1px 1px 3px ghostwhite;
+}
+
+.label {
+  padding: 1rem;
+  font-size: 1.5rem;
+  color: black;
+}
+
+.itemProperty {
+  padding: 0.5rem;
+  font-size: 1.3rem;
+  box-shadow: inset 0 0 3px;
+}
+
+.titleProperty {
+  border-radius: 10px;
+  background-color: #3d3b41;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: whitesmoke;
+  box-shadow: 0 1px 2px rgba(1, 1, 0, 2);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.titleProperty:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 4);
+}
+
+.titleBlock {
+  box-shadow: inset 0 0 10px;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~update page css~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+.updateContainer {
+  display: flex;
+  flex-direction: column;
+  background: #4c4b4f;
+  opacity: 0.88;
+}
+
+.updateItem {
+  display: flex;
+  flex-direction: column;
+  background: #4c4b4f;
+  opacity: 0.88;
+}
+
+.updateWrapper {
+  width: 100%;
+  display: flex;
+  background: url("../images/gamingbackground.jpg");
+  background-size: cover;
+  height: 100vh;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.updateButton {
+  border: none;
+  border-radius: 10px;
+  background-color: #3d3b41;
+  padding: 0.5rem;
+  text-decoration: none;
+  color: whitesmoke;
+  box-shadow: 0 1px 2px rgba(1, 1, 0, 2);
+  transition: box-shadow 0.3s ease-in-out;
+  margin: 0.5rem 0;
+}
+.updateButton:hover {
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 4);
+}
+
+.multiButton {
+  display: flex;
+  justify-content: space-around;
+}
+
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ submit page */
+
+.submitWrapper {
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  flex-wrap: wrap;
+  background: url("../images/gamingbackground.jpg");
+  background-size: cover;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.submitForm {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.4rem;
+  overflow: hidden;
+}
+
+.submitContainer {
+  display: flex;
+  width: 22.5%;
+  flex-wrap: wrap;
+  background: #4c4b4f;
+  opacity: 0.88;
+}
+
+.submitInput {
+  flex-basis: 80%;
+  margin: 0.35rem;
+  font-size: 1.4rem;
+}
+
+.inputSelect {
+  flex-basis: 80%;
+  margin: 0.35rem;
+  font-size: 1.4rem;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.2rem;
+  flex-basis: 50%;
+  align-self: center;
+}

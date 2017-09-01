@@ -11,6 +11,7 @@ const indexRoutes = require("./routes/indexRoutes");
 const directoryRoutes = require("./routes/directoryRoutes");
 
 const app = express();
+
 mongoose.Promise = bluebird;
 
 mongoose.connect("mongodb://localhost:27017/gameDirectory");
@@ -26,5 +27,9 @@ app.use(logger("dev"));
 //routes
 app.use("/", indexRoutes);
 app.use("/directory", directoryRoutes);
+
+app.get("/newItem", (req, res) => {
+  res.render("submit");
+});
 
 app.listen(8000, () => console.log("server is running on port 8000"));

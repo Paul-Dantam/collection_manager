@@ -6,21 +6,35 @@ const Game = require("../models/gameCollection");
 
 mongoose.Promise = bluebird;
 
-mongoose.connect("mongodb://localhost:27017/gameDirectory");
-
-directoryRoutes.post("/gameDirectory", (req, res) => {
-  let newGame = new Game(req.body);
-  newGame
-    .save()
-    .then(savedGame => {
-      res.send(savedGame);
+directoryRoutes.get("/update/:id", (req, res) => {
+  Game.findOne({ _id: req.params.id })
+    .then(foundGame => {
+      !foundGame
+        ? res.send({ msg: "No Games found" })
+        : res.render("update", { data: foundGame });
     })
     .catch(err => {
       res.status(500).send(err);
     });
 });
 
-directoryRoutes.put("/gameDirectory/:id", (req, res) => {
+directoryRoutes.get("/newItem", (req, res) => {
+  res.render("submit");
+});
+
+directoryRoutes.post("/newgame", (req, res) => {
+  let newGame = new Game(req.body);
+  newGame
+    .save()
+    .then(savedGame => {
+      res.redirect("/");
+    })
+    .catch(err => {
+      res.status(500).send(err);
+    });
+});
+
+directoryRoutes.post("/update/:id", (req, res) => {
   Game.findByIdAndUpdate(req.params.id, req.body).then(updatedGame => {
     !updatedGame
       ? res.send({ msg: "Could not update Game" })
@@ -28,11 +42,9 @@ directoryRoutes.put("/gameDirectory/:id", (req, res) => {
   });
 });
 
-directoryRoutes.delete("/gameDirectory/:id", (req, res) => {
-  Game.findByIdAndRemove(req.params.id).then(updatedGame => {
-    !updatedGame
-      ? res.send({ msg: "Could not remove" })
-      : res.send(updatedGame);
+directoryRoutes.post("/delete/:id", (req, res) => {
+  Game.findByIdAndRemove(req.params.id).then(deletedGame => {
+    !deletedGame ? res.send({ msg: "Could not remove" }) : res.redirect("/");
   });
 });
 
